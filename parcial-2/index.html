@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Parcial 2</title>
-    <link rel="stylesheet" src="index.css">
-</head>
-<body>
-    <section>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./img/Pokemon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="content">
+      <section class="dome">
+        <img alt="PokéAPI" src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"/>
+        <h1>Buscador de Pokemones</h1>
+        <h5>Busca desde pokemones hasta habilidades de los mismos</h5>
+        <br>
         <form id="pokemon-finder-form">
-            <label for="">Nombre:</label>
-            <select id="pokemon-finder-search-type">
-                <option value="pokemon">pokemon</option>
-                <option value="ability">ability</option>
+          <div class="input">
+            <br>
+            <label for="">Buscar</label>
+            <input id="pokemon-finder-query" class="input" type="text" />
+            <button id="limpiar">Limpiar</button>
+          </div>
+          <div class="input">
+            <label for="">Tipo de búsqueda</label>
+
+            <select id="pokemon-finder-search-type" class="input">
+              <option value="pokemon">pokemon</option>
+              <option value="ability">ability</option>
             </select>
-            <input id="pokemon-finder-query" type="text">
-            <button type="submit">Buscar</button>
+            <button type="submit" id="buscar">Buscar</button>
+          </div>
         </form>
-    </section>
-    <section id="pokemon-finder-response"></section>
-    <script src="utils.js"></script>
-    <script src="index.js"></script>
-</body>
+      </section>
+
+      <section id="pokemon-finder-response" class="response"></section>
+      <script src="utils.js"></script>
+      <script src="index.js"></script>
+    </div>
+  </body>
 </html>
