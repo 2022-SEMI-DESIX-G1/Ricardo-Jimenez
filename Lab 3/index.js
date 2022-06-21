@@ -29,11 +29,11 @@ var zz, i, len, count;
 for (i = 0, len = strin.length; i < len; ++i) {
      
     zz = strin.charAt(i); 
-    count = counts[zz];
-    counts[zz] = count ? count + 1 : 1;       
+    count = checks[zz];
+    checks[zz] = count ? count + 1 : 1;       
 }
-    for (zz in counts) {
-        alert(zz + ": " + counts[zz]);
+    for (zz in checks) {
+        alert(zz + ": " + checks[zz]);
     }
 }
 
