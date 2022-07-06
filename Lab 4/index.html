@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design.css">
+    <title>Lab 4</title>
+</head>
+<body>
+    <h2>Fibonacci</h2>
+
+    <form>
+        <label for="numero">Number:</label>
+        <input id="numero" type="text" size="40/">
+        <input type="button" onclick="charger();" value="Generar">
+    </form>
+    <div id="area" ></div>
+
+<script>
+
+function charger () {
+   var v_numero = document.getElementById("numero").value;
+   var x = 0;
+   var y = 1;
+   var z = 0;
+   var currentDiv = document.getElementById("area");
+   for (i=0;i<v_numero;i++){
+        var Div1 = document.createElement("div");
+        Div1.setAttribute("id", i);
+        Div1.innerHTML = `<h1 name=${i} onclick="remove(${i})">${x}</h1>`;
+        document.body.insertBefore(Div1, currentDiv);
+        z = x + y;
+        x = y;
+        y = z;
+    }
+}
+function remove(v_elemento)
+    {
+    var mensaje;
+    var opcion = confirm("Deseas Eliminar la Primera Tarjeta?");
+    if (opcion == true) {
+        var element = document.getElementById("area");
+        var Div1 = document.getElementById(v_elemento);
+        document.body.removeChild(Div1, element);
+        mensaje = "Tarjeta Eliminada Exitosamente";
+	} else {
+	    mensaje = "Se ha Eliminado";
+	}
+	document.getElementById("Confirmacion").innerHTML = mensaje;
+}
+</script>
+</body>
+</html>
