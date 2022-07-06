@@ -1,12 +1,12 @@
 {
-    "name": "Ricardo Jimenez",
+    "name": "lab7",
     "version": "1.0.0",
     "description": "Lab 7",
     "main": "app.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
+    "author": "Ricardo Jimenez",
     "license": "ISC",
     "dependencies": {
       "axios": "^0.27.2"
